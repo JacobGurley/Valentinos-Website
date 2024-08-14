@@ -27,26 +27,12 @@
     </section>
 
 
-    <!-- Menu Highlights Section -->
-    <section class="menu-highlights" id="menu">
-      <h2>Best Sellers</h2>
-      <div class="menu-items">
-        <div class="menu-item">
-          <img src="../assets/pizza1.jpg" alt="Margherita Pizza">
-          <h3>Margherita Pizza</h3>
-          <p>Classic margherita pizza with fresh tomatoes, mozzarella, and basil.</p>
-        </div>
-        <div class="menu-item">
-          <img src="../assets/pizza2.jpg" alt="Pepperoni Pizza">
-          <h3>Pepperoni Pizza</h3>
-          <p>Loaded with pepperoni and topped with mozzarella cheese.</p>
-        </div>
-        <div class="menu-item">
-          <img src="../assets/pizza3.jpg" alt="Veggie Pizza">
-          <h3>Veggie Pizza</h3>
-          <p>A medley of fresh vegetables on a crispy crust.</p>
-        </div>
+    <!-- Map of Location -->
+    <section class="map">
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.0845720863!2d-118.07500482292696!3d33.81013053047351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd2e6461f0db1d%3A0xb604e20cb61b2719!2s10511%20Los%20Alamitos%20Blvd%2C%20Los%20Alamitos%2C%20CA%2090720!5e0!3m2!1sen!2sus!4v1723676317490!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      
     </section>
 
     <!-- Locations Section -->
@@ -274,46 +260,24 @@ body {
   100% { transform: translateY(0); opacity: 1; }
 }
 
-/* Menu Highlights Section */
-.menu-highlights {
+/* Map Section */
+.map {
   padding: 50px 20px;
   text-align: center;
+  background-color: #f9f9f9;
 }
 
-.menu-highlights h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.menu-items {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.menu-item {
-  width: 30%;
-  margin-bottom: 20px;
-  transition: transform 0.3s;
-}
-
-.menu-item img {
-  width: 100%;
+.map-container {
+  max-width: 50%;
+  margin: 0 auto;
   border-radius: 10px;
-  transition: transform 0.3s;
+  overflow: hidden;
 }
 
-.menu-item:hover img {
-  transform: scale(1.05);
-}
-
-.menu-item h3 {
-  font-size: 24px;
-  margin-top: 10px;
-}
-
-.menu-item p {
-  font-size: 16px;
+iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
 }
 
 /* Locations Section */
