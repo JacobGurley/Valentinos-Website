@@ -1,20 +1,17 @@
 <template>
   <div id="app">
     <TheHeader />
-    <HomePage />
+    <router-view />
   </div>
 </template>
 
 <script>
 import TheHeader from './components/TheHeader.vue'
-import HomePage from './components/HomePage.vue'
 
 export default {
   name: 'App',
   components: {
-    TheHeader,
-    HomePage
-  
+    TheHeader
 }
 }
 </script>

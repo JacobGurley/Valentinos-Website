@@ -1,7 +1,6 @@
 <template>
   <div>
     <TheHeader /> <!-- Include the header component -->
-
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
@@ -35,13 +34,16 @@
       
     </section>
 
-    <!-- Locations Section -->
-    <section class="locations" id="locations">
-      <h2>Our Location</h2>
-      <div class="location">
-        <h3>Los Alamitos</h3>
-        <p>10511 Los Alamitos Blvd, Los Alamitos, CA 90720</p>
-        <p>Phone: (562) 795-0400</p>
+    <!-- Hours Section -->
+    <section class="hours" id="hours">
+      <h2>Our Hours</h2>
+      <div class="hours-content">
+        <div class="day-hours">
+          <p><strong>Monday - Saturday:</strong> 10:00 AM - 10:00 PM</p>
+        </div>
+        <div class="day-hours">
+          <p><strong>Sunday:</strong> 11:00 AM - 9:00 PM</p>
+        </div>
       </div>
     </section>
 
@@ -255,14 +257,9 @@ body {
   text-align: justify;
 }
 
-@keyframes slideIn {
-  0% { transform: translateY(50px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
 /* Map Section */
 .map {
-  padding: 50px 20px;
+  padding: 20px 20px;
   text-align: center;
   background-color: #f9f9f9;
 }
@@ -280,29 +277,39 @@ iframe {
   border: none;
 }
 
-/* Locations Section */
-.locations {
-  padding: 50px 20px;
+/* Hours Section */
+.hours {
+  padding: 20px 20px;
   text-align: center;
   background-color: #f9f9f9;
 }
 
-.locations h2 {
+.hours h2 {
   font-size: 36px;
   margin-bottom: 20px;
+  color: #E21717;
+  font-family: 'Cooper Black', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.location {
-  margin-bottom: 20px;
+.hours-content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
-.location h3 {
+.day-hours p {
   font-size: 24px;
-  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin: 10px 0;
 }
 
-.location p {
-  font-size: 18px;
+.day-hours p strong {
+  font-family: 'Cooper Black', serif;
+  color: #E21717;
 }
 
 /* Footer */
@@ -347,6 +354,11 @@ iframe {
 
   .order-link {
     font-size: 1rem; /* Adjusted font size */
+  }
+
+  .hours-content {
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>

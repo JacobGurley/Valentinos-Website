@@ -9,13 +9,12 @@
       </div>
       <nav class="main-nav">
         <ul>
-          <li><a href="#menu" class="nav-link">Menu</a></li>
-          <li><a href="#catering" class="nav-link">Catering</a></li>
-          <li><a href="#coupons" class="nav-link">Coupons</a></li>
-          <li><a href="#contact" class="nav-link">Contact Us</a></li>
-          <li><a href="#hours" class="nav-link">Hours</a></li>
-          <li><a href="#order" class="order-link">Order Now</a></li>
-          <li><a href="#login" class="login-link"><i class="fa-regular fa-user"></i></a></li> <!-- Login icon -->
+          <li><router-link to="/menu" class="nav-link">Menu</router-link></li>
+          <li><router-link to="#catering" class="nav-link">Catering</router-link></li>
+          <li><router-link to="#coupons" class="nav-link">Coupons</router-link></li>
+          <li><router-link to="#hours" class="nav-link">Hours</router-link></li>
+          <li><router-link to="#order" class="order-link">Order Now</router-link></li>
+          <li><router-link to="#login" class="login-link"><i class="fa-regular fa-user"></i></router-link></li>
         </ul>
       </nav>
     </div>
@@ -82,7 +81,8 @@
 
 .main-nav{
     flex-grow: 1; /* Allow nav to grow to take available space */
-    text-align: right; /* Align nav items to the right */
+    display: flex;
+    justify-content: center;
 }
 
 .main-nav ul {
@@ -90,7 +90,7 @@
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
     display: flex; /* Use flexbox for layout */
-    justify-content: flex-end; /* Align items to the end */
+    justify-content: space-between;
     gap: 25px; /* Space between items */
     font-family: 'Cooper Black', serif; /* Set font */
     font-size: 20px; /* Font size */
